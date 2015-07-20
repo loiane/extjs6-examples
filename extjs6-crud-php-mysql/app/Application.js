@@ -9,11 +9,9 @@ Ext.define('Blog.Application', {
     name: 'Blog',
 
     stores: [
-        // TODO: add global / shared stores here
     ],
     
     launch: function () {
-        // TODO - Launch the application
     },
 
     onAppUpdate: function () {

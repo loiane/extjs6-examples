@@ -1,10 +1,3 @@
-/**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
 Ext.define('Blog.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
@@ -14,7 +7,7 @@ Ext.define('Blog.view.main.Main', {
 
         'Blog.view.main.MainController',
         'Blog.view.main.MainModel',
-        'Blog.view.main.List'
+        'Blog.view.contacts.List'
     ],
 
     controller: 'main',
@@ -34,28 +27,9 @@ Ext.define('Blog.view.main.Main', {
             title: 'Home',
             iconCls: 'x-fa fa-home',
             layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
             items: [{
-                xtype: 'mainlist'
+                xtype: 'contactslist'
             }]
-        },{
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Groups',
-            iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
         }
     ]
 });

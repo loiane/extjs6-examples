@@ -13,15 +13,15 @@ Ext.define('Blog.view.main.Main', {
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 
-        'Blog.view.main.MainController',
         'Blog.view.main.MainModel',
-        'Blog.view.main.List'
+        'Blog.view.main.MainController',
+        'Blog.view.contacts.List'
     ],
 
-    controller: 'main',
-    viewModel: 'main',
-
     ui: 'navigation',
+
+    viewModel: 'main',
+    controller: 'main',
 
     tabBarHeaderPosition: 1,
     titleRotation: 0,
@@ -78,27 +78,8 @@ Ext.define('Blog.view.main.Main', {
     items: [{
         title: 'Home',
         iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+            xtype: 'contactslist'
         }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
     }]
 });
