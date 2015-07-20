@@ -8,8 +8,8 @@ Ext.define('Blog.view.contacts.ContactsModel', {
 
     stores: {
         contacts: {
-            model: 'Blog.model.Contact'//,
-            //autoLoad: true
+            model: 'Blog.model.Contact',
+            autoLoad: true
         }
     },
 

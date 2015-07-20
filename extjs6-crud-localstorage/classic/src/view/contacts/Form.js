@@ -5,18 +5,26 @@ Ext.define('Blog.view.contacts.Form', {
 
     requires: [
         'Ext.layout.container.Fit',
+        'Ext.layout.container.HBox',
         'Ext.form.Panel',
         'Ext.form.field.Text'
     ],
 
-    title: 'Edit Contact',
     layout: 'fit',
-    autoShow: true,
-    width: 300,
+    width: 350,
+    closable: false,
+    modal: true,
+
+    session: true,
+
+    bind: {
+        title: '{windowTitle}'
+    },
 
     items: [
         {
             xtype: 'form',
+            reference: 'contactsForm',
             padding: '5 5 0 5',
             border: false,
             style: 'background-color: #fff;',
@@ -24,7 +32,6 @@ Ext.define('Blog.view.contacts.Form', {
             fieldDefaults: {
                 anchor: '100%',
                 labelAlign: 'left',
-                allowBlank: false,
                 combineErrors: true,
                 msgTarget: 'side'
             },
@@ -39,17 +46,48 @@ Ext.define('Blog.view.contacts.Form', {
                 {
                     xtype: 'textfield',
                     name: 'name',
-                    fieldLabel: 'Name'
+                    fieldLabel: 'Name',
+                    allowBlank: false
                 },
                 {
                     xtype: 'textfield',
                     name: 'phone',
-                    fieldLabel: 'Phone'
+                    fieldLabel: 'Phone',
+                    allowBlank: false
                 },
                 {
                     xtype: 'textfield',
                     name: 'email',
-                    fieldLabel: 'Email'
+                    fieldLabel: 'Email',
+                    allowBlank: false
+                }
+            ]
+        }
+    ],
+
+    dockedItems: [
+        {
+            xtype: 'toolbar',
+            dock: 'bottom',
+            ui: 'footer',
+            layout: {
+                pack: 'end',
+                type: 'hbox'
+            },
+            items: [
+                {
+                    text: 'Save',
+                    //glyph: Packt.util.Glyphs.getGlyph('save'),
+                    listeners: {
+                        click: 'onSave'
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    //glyph: Packt.util.Glyphs.getGlyph('cancel'),
+                    listeners: {
+                        click: 'onCancel'
+                    }
                 }
             ]
         }

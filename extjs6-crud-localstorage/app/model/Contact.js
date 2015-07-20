@@ -5,9 +5,11 @@ Ext.define('Blog.model.Contact', {
         'Ext.data.proxy.LocalStorage'
     ],
 
+    entityName: 'Contact',
+
     fields: [
         { name: 'id', type: 'int' },
-        { name: 'name', type: 'int' },
+        { name: 'name', type: 'string' },
         { name: 'phone', type: 'string' },
         { name: 'email', type: 'string' }
     ],

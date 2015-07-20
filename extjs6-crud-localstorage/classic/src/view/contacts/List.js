@@ -13,6 +13,8 @@ Ext.define('Blog.view.contacts.List', {
     viewModel: 'contacts',
     controller: 'contacts',
 
+    session: true,
+
     bind: {
         title: '{title}',
         store: '{contacts}'
@@ -35,12 +37,12 @@ Ext.define('Blog.view.contacts.List', {
             text: 'Name'
         },
         {
-            width: 250,
+            width: 200,
             dataIndex: 'phone',
             text: 'Phone'
         },
         {
-            width: 150,
+            width: 250,
             dataIndex: 'email',
             text: 'Email'
         }
