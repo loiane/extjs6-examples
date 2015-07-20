@@ -13,7 +13,7 @@ Ext.define('Blog.view.contacts.List', {
     viewModel: 'contacts',
     controller: 'contacts',
 
-    session: true,
+    iconCls: 'fa fa-users',
 
     bind: {
         title: '{title}',
@@ -55,18 +55,21 @@ Ext.define('Blog.view.contacts.List', {
             items: [
                 {
                     text: 'Add',
+                    iconCls: 'fa fa-plus',
                     listeners: {
                         click: 'onAddClick'
                     }
                 },
                 {
                     text: 'Edit',
+                    iconCls: 'fa fa-pencil',
                     listeners: {
                         click: 'onEditClick'
                     }
                 },
                 {
                     text: 'Delete',
+                    iconCls: 'fa fa-trash',
                     listeners: {
                         click: 'onDeleteClick'
                     }

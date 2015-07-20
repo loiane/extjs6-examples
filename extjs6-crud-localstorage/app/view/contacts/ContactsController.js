@@ -23,6 +23,14 @@ Ext.define('Blog.view.contacts.ContactsController', {
 
     onDeleteClick: function(button, e, options){
 
+        var me = this,
+            records = me.getRecordsSelected(),
+            store = me.getView().getStore();
+
+        if (records){
+            store.remove(records);
+            store.sync();
+        }
     },
 
     createDialog: function(record){
@@ -34,6 +42,7 @@ Ext.define('Blog.view.contacts.ContactsController', {
 
         me.dialog = view.add({
             xtype: 'contactsform',
+            iconCls: record ? 'fa fa-pencil' : 'fa fa-plus',
             viewModel: {
                 data: {
                     windowTitle: record ? 'Edit: ' + record.get('name') : 'Add Contact'
@@ -59,7 +68,6 @@ Ext.define('Blog.view.contacts.ContactsController', {
 
     onSave: function(button, e, options){
         var me = this,
-            dialog = me.dialog,
             form = me.dialog.down('form'),
             isEdit = me.isEdit,
             record = form.getRecord(),

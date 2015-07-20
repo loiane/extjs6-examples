@@ -2357,6 +2357,10 @@
     font-weight: normal;
     font-style: normal;
 }
+/* http://localhost:1841/sass/etc/all.scss:1 */
+.x-form-text.fixed {
+    display: inline;
+}
 /* http://localhost:1841/ext/packages/core/sass/src/util/SizeMonitor.scss:5 */
 .x-size-monitored {
     position: relative;

@@ -15,8 +15,6 @@ Ext.define('Blog.view.contacts.Form', {
     closable: false,
     modal: true,
 
-    session: true,
-
     bind: {
         title: '{windowTitle}'
     },
@@ -24,7 +22,6 @@ Ext.define('Blog.view.contacts.Form', {
     items: [
         {
             xtype: 'form',
-            reference: 'contactsForm',
             padding: '5 5 0 5',
             border: false,
             style: 'background-color: #fff;',
@@ -33,7 +30,8 @@ Ext.define('Blog.view.contacts.Form', {
                 anchor: '100%',
                 labelAlign: 'left',
                 combineErrors: true,
-                msgTarget: 'side'
+                msgTarget: 'side',
+                fieldCls: 'fixed' //fix for textfield text in Chrome
             },
 
             items: [
@@ -77,14 +75,14 @@ Ext.define('Blog.view.contacts.Form', {
             items: [
                 {
                     text: 'Save',
-                    //glyph: Packt.util.Glyphs.getGlyph('save'),
+                    iconCls: 'fa fa-floppy-o',
                     listeners: {
                         click: 'onSave'
                     }
                 },
                 {
                     text: 'Cancel',
-                    //glyph: Packt.util.Glyphs.getGlyph('cancel'),
+                    iconCls: 'fa fa-close',
                     listeners: {
                         click: 'onCancel'
                     }

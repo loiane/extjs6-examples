@@ -77,7 +77,7 @@ Ext.define('Blog.view.main.Main', {
 
     items: [{
         title: 'Home',
-        iconCls: 'fa-home',
+        iconCls: 'fa-users',
         items: [{
             xtype: 'contactslist'
         }]
