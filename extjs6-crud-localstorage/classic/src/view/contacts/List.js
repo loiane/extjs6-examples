@@ -6,6 +6,7 @@ Ext.define('Blog.view.contacts.List', {
     requires: [
         'Blog.view.contacts.ContactsController',
         'Blog.view.contacts.ContactsModel',
+        'Blog.view.contacts.Form',
 
         'Ext.selection.CheckboxModel'
     ],

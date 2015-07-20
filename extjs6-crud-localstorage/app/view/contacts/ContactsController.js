@@ -3,7 +3,6 @@ Ext.define('Blog.view.contacts.ContactsController', {
     alias: 'controller.contacts',
 
     requires: [
-        'Blog.view.contacts.Form',
         'Blog.model.Contact'
     ],
 

@@ -5,9 +5,10 @@ Ext.define('Blog.view.main.Main', {
     requires: [
         'Ext.MessageBox',
 
+        'Blog.view.contacts.List',
+
         'Blog.view.main.MainController',
-        'Blog.view.main.MainModel',
-        'Blog.view.contacts.List'
+        'Blog.view.main.MainModel'
     ],
 
     controller: 'main',
@@ -24,8 +25,8 @@ Ext.define('Blog.view.main.Main', {
 
     items: [
         {
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
+            title: 'Contacts',
+            iconCls: 'x-fa fa-users',
             layout: 'fit',
             items: [{
                 xtype: 'contactslist'
